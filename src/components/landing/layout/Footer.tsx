@@ -41,11 +41,6 @@ export function Footer() {
             ))}
           </nav>
         </div>
-
-        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} João Kelvin. Todos os direitos reservados.</p>
-          <p>Feito com atenção aos detalhes.</p>
-        </div>
       </div>
     </footer>
   );
