@@ -1,19 +1,23 @@
 export const FAQS = [
   {
     q: "Como funciona o desenvolvimento?",
-    a: "Iniciamos com um briefing para entender seu objetivo. Depois planejamos escopo, prazo e etapas. O desenvolvimento é iterativo, com validações constantes até a entrega final.",
+    a: "Cada projeto é desenvolvido de forma planejada e transparente, com acompanhamento contínuo e validações durante todo o processo para garantir um resultado alinhado às suas expectativas.",
   },
   {
     q: "Quanto tempo leva?",
-    a: "Depende do escopo. Landing pages costumam levar de 1 a 2 semanas. Sistemas e automações variam conforme a complexidade — sempre com prazos claros no planejamento.",
+    a: "O prazo varia conforme a complexidade e os requisitos do projeto. Antes de iniciar o desenvolvimento, apresento um planejamento com cronograma e prazo de entrega definidos.",
   },
   {
     q: "Como é realizado o pagamento?",
-    a: "Trabalhamos com sinal no início e parcela restante na entrega. Para projetos maiores, dividimos em marcos com pagamentos escalonados.",
+    a: "O pagamento é definido de acordo com o projeto. Normalmente, é realizado com uma entrada para o início do desenvolvimento e o restante conforme as etapas ou na entrega, sempre com tudo alinhado previamente.",
   },
   {
     q: "Após a entrega existe suporte?",
-    a: "Sim. Todo projeto inclui um período de suporte para ajustes. Também ofereço planos de manutenção e evolução contínua.",
+    a: "Sim. Após a entrega, todo projeto inclui um período de suporte para garantir que tudo funcione corretamente. Caso deseje, também é possível contratar um plano de manutenção para atualizações, suporte técnico e pequenos ajustes.",
+  },
+  {
+    q: "O que está incluso no plano de manutenção?",
+    a: "O plano de manutenção é opcional e pode incluir suporte técnico, correção de erros, atualizações, monitoramento e pequenos ajustes para manter sua solução funcionando corretamente. O escopo é definido de acordo com as necessidades de cada projeto.",
   },
   {
     q: "É possível fazer apenas melhorias em um sistema existente?",

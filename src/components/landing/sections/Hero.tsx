@@ -78,12 +78,11 @@ export function Hero() {
             variants={fadeUp}
             className="mt-5 text-sm text-muted-foreground"
           >
-            Olá, sou{" "}
+            Ajudo empresas a{" "}  
             <span className="font-medium text-foreground">
-              João Kelvin
+              digitalizar processos, automatizar tarefas
             </span>
-            , desenvolvedor especializado em criar soluções sob medida para
-            empresas que desejam crescer utilizando tecnologia.
+            e fortalecer sua presença online com soluções desenvolvidas sob medida.
           </motion.p>
 
           {/* Botões */}

@@ -13,13 +13,9 @@ export function About() {
               <span className="text-xs font-medium uppercase tracking-wider text-primary">
                 Sobre
               </span>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
-                Olá, sou João Kelvin.
-              </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Desenvolvedor especializado em criação de sites, sistemas web e automações. Meu
-                objetivo é desenvolver soluções digitais sob medida que ajudem empresas a otimizar
-                processos, fortalecer sua presença digital e impulsionar seus resultados.
+                Desenvolvo soluções digitais sob medida para empresas que buscam otimizar processos, fortalecer sua presença online e crescer através da tecnologia.
+Cada projeto é desenvolvido de acordo com a necessidade do negócio, seja um site institucional, uma landing page de alta conversão, um sistema web personalizado ou uma automação para eliminar tarefas repetitivas. Meu foco é entregar soluções modernas, intuitivas e escaláveis que gerem resultados reais.
               </p>
             </div>
           </div>
