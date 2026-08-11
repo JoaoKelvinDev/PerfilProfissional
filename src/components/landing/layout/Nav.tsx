@@ -1,3 +1,5 @@
+import logoPerfil from "../../../assets/logo-perfil.png";
+
 import { motion } from "motion/react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -34,8 +36,8 @@ export function Nav() {
           )}
         >
           <a href="#top" className="flex items-center gap-2.5">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-primary to-primary-glow text-sm font-bold text-primary-foreground shadow-glow">
-              JK
+            <span className="grid h-8 w-8 place-items-center overflow-hidden rounded-lg border border-white/10 bg-background/70 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_8px_24px_rgba(0,0,0,0.2)] backdrop-blur-sm">
+              <img src={logoPerfil} alt="João Kelvin" className="h-full w-full object-cover" />
             </span>
             <span className="text-sm font-semibold tracking-tight">João Kelvin</span>
           </a>

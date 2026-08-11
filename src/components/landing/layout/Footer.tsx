@@ -1,3 +1,5 @@
+import logoPerfil from "../../../assets/logo-perfil.png";
+
 import { Github, Globe, Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 import { SOCIAL, WHATSAPP_URL } from "@/lib/site";
@@ -17,8 +19,8 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-[1fr_auto] sm:items-center">
           <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary to-primary-glow text-sm font-bold text-primary-foreground shadow-glow">
-              JK
+            <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-background/70 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.22)] backdrop-blur-sm">
+              <img src={logoPerfil} alt="João Kelvin" className="h-full w-full object-cover" />
             </span>
             <div>
               <div className="text-sm font-semibold">João Kelvin</div>

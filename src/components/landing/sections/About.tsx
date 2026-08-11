@@ -1,3 +1,5 @@
+import logoPerfil from "../../../assets/logo-perfil.png";
+
 import { Reveal } from "../shared/Reveal";
 
 export function About() {
@@ -6,8 +8,8 @@ export function About() {
       <div className="mx-auto max-w-4xl px-4">
         <Reveal className="glass rounded-3xl p-8 shadow-card sm:p-12">
           <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-[auto_1fr] sm:gap-10">
-            <div className="mx-auto grid h-24 w-24 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-primary to-primary-glow text-2xl font-bold text-primary-foreground shadow-glow">
-              JK
+            <div className="mx-auto grid h-24 w-24 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-background/70 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_12px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm">
+              <img src={logoPerfil} alt="João Kelvin" className="h-full w-full object-cover" />
             </div>
             <div>
               <span className="text-xs font-medium uppercase tracking-wider text-primary">
