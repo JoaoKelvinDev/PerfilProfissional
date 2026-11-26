@@ -1,3 +1,5 @@
+import { MotionConfig } from "motion/react";
+
 import { Footer } from "./layout/Footer";
 import { Nav } from "./layout/Nav";
 import { WhatsAppFloat } from "./layout/WhatsAppFloat";
@@ -9,23 +11,30 @@ import { Hero } from "./sections/Hero";
 import { Portfolio } from "./sections/Portfolio";
 import { Process } from "./sections/Process";
 import { Services } from "./sections/Services";
+import { TechMarquee } from "./sections/TechMarquee";
+import { BackgroundFX, ScrollProgress } from "./shared/effects";
 
 export function Landing() {
   return (
-    <div className="relative min-h-screen bg-background text-foreground antialiased">
-      <Nav />
-      <main>
-        <Hero />
-        <Services />
-        <Features />
-        <Process />
-        <Portfolio />
-        <About />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="relative isolate min-h-screen overflow-x-clip bg-background text-foreground antialiased">
+        <ScrollProgress />
+        <BackgroundFX />
+        <Nav />
+        <main>
+          <Hero />
+          <TechMarquee />
+          <Services />
+          <Features />
+          <Process />
+          <Portfolio />
+          <About />
+          <FAQ />
+          <CTA />
+        </main>
+        <Footer />
+        <WhatsAppFloat />
+      </div>
+    </MotionConfig>
   );
 }
