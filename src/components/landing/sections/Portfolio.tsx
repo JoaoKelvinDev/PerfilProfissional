@@ -133,7 +133,7 @@ export function Portfolio() {
           variants={stagger}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0, margin: "0px 0px -15% 0px" }}
           className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           {PROJECTS.map((project) => (
