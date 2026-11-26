@@ -23,12 +23,12 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-[1fr_auto] sm:items-center">
           <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-background/70 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.22)] backdrop-blur-sm">
-              <img src={logoPerfil} alt="João Kelvin" className="h-full w-full object-cover" />
+            <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-white/10 bg-background/70 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.22)] backdrop-blur-sm">
+              <img src={logoPerfil} alt="JK Systems" className="h-full w-full object-cover" />
             </span>
             <div>
-              <div className="text-sm font-semibold">João Kelvin</div>
-              <div className="text-xs text-muted-foreground">Soluções Digitais</div>
+              <div className="text-sm font-semibold">JK <span className="text-primary">Systems</span></div>
+              <div className="text-xs text-muted-foreground">Soluções Digitais · por João Kelvin</div>
             </div>
           </div>
 

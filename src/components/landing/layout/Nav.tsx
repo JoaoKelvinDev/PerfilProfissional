@@ -55,10 +55,17 @@ export function Nav() {
           )}
         >
           <a href="#top" className="group flex items-center gap-2.5">
-            <span className="grid h-8 w-8 transition-transform duration-300 group-hover:rotate-[-6deg] group-hover:scale-110 place-items-center overflow-hidden rounded-lg border border-white/10 bg-background/70 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_8px_24px_rgba(0,0,0,0.2)] backdrop-blur-sm">
-              <img src={logoPerfil} alt="João Kelvin" className="h-full w-full object-cover" />
+            <span className="grid h-9 w-9 transition-transform duration-300 group-hover:rotate-[-6deg] group-hover:scale-110 place-items-center overflow-hidden rounded-full border border-white/10 bg-background/70 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_8px_24px_rgba(0,0,0,0.2)] backdrop-blur-sm">
+              <img src={logoPerfil} alt="JK Systems" className="h-full w-full object-cover" />
             </span>
-            <span className="text-sm font-semibold tracking-tight">João Kelvin</span>
+            <span className="flex flex-col leading-tight">
+              <span className="text-sm font-semibold tracking-tight">
+                JK <span className="text-primary">Systems</span>
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                Soluções Digitais
+              </span>
+            </span>
           </a>
 
           <nav className="hidden items-center gap-1 md:flex">

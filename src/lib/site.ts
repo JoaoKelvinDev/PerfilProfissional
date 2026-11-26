@@ -4,8 +4,8 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURICo
 )}`;
 
 export const SOCIAL = {
-  instagram: "https://www.instagram.com/joaokelvindev/",
+  instagram: "https://www.instagram.com/jksystems.tech/",
   linkedin: "https://www.linkedin.com/in/joaokelvindev/",
   github: "https://github.com/JoaoKelvinDev",
-  email: "mailto:contato@joaokelvin.dev",
+  email: "mailto:jkelvindev@gmail.com",
 };
