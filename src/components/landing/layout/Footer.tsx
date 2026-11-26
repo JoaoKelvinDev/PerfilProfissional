@@ -15,7 +15,11 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border/60 py-12">
+    <footer className="relative border-t border-border/60 py-12">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent"
+      />
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-[1fr_auto] sm:items-center">
           <div className="flex items-center gap-3">
@@ -36,7 +40,7 @@ export function Footer() {
                 target={l.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
                 aria-label={l.label}
-                className="grid h-9 w-9 place-items-center rounded-full border border-border/60 bg-white/[0.02] text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+                className="grid h-9 w-9 place-items-center rounded-full border border-border/60 bg-white/[0.02] text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/10 hover:text-foreground hover:shadow-glow"
               >
                 <l.icon className="h-4 w-4" />
               </a>
