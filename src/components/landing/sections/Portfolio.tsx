@@ -5,6 +5,7 @@ import { WHATSAPP_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 import { PROJECTS, type Project } from "../data/projects";
+import { TiltCard } from "../shared/effects";
 import { fadeUp, stagger } from "../shared/motion";
 import { SectionHeading } from "../shared/SectionHeading";
 
@@ -12,11 +13,10 @@ function ProjectCard({ p }: { p: Project }) {
   const isGithub = p.link?.includes("github");
 
   return (
-    <motion.article
-      variants={fadeUp}
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.3 }}
-      className="glass group flex flex-col overflow-hidden rounded-2xl border border-border/50 shadow-card transition-all duration-300 hover:border-primary/30 hover:shadow-xl"
+    <motion.div variants={fadeUp} className="h-full">
+    <TiltCard className="group h-full rounded-2xl" max={6}>
+    <article
+      className="glass flex h-full flex-col overflow-hidden rounded-2xl border border-border/50 shadow-card transition-all duration-500 hover:border-primary/40 hover:shadow-[0_30px_80px_-30px_oklch(0.58_0.222_264/0.55)]"
     >
       {/* Imagem */}
       <div
@@ -29,9 +29,16 @@ function ProjectCard({ p }: { p: Project }) {
           <img
             src={p.image}
             alt={p.name}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
           />
         )}
+
+        {/* Brilho que atravessa a imagem */}
+        <div
+          aria-hidden
+          className="absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:left-[130%] group-hover:opacity-100"
+        />
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
@@ -94,15 +101,18 @@ function ProjectCard({ p }: { p: Project }) {
             href={p.link || WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-medium text-primary transition-all hover:gap-3"
+            className="group/link relative inline-flex items-center gap-2 font-medium text-primary transition-all hover:gap-3"
           >
             {isGithub ? "Ver código" : "Acessar projeto"}
 
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5" />
+            <span className="absolute -bottom-1 left-0 h-px w-0 bg-primary transition-all duration-300 group-hover/link:w-full" />
           </a>
         </div>
       </div>
-    </motion.article>
+    </article>
+    </TiltCard>
+    </motion.div>
   );
 }
 
@@ -137,12 +147,16 @@ export function Portfolio() {
           <motion.div
             variants={fadeUp}
             whileHover={{ y: -8 }}
-            className="glass flex min-h-[520px] flex-col justify-between rounded-2xl border border-primary/20 p-8 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-xl"
+            className="glass border-beam flex min-h-[520px] flex-col justify-between rounded-2xl border border-primary/20 p-8 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-xl"
           >
             <div>
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
+              <motion.div
+                className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 shadow-glow"
+                animate={{ rotate: [0, -8, 8, 0], scale: [1, 1.08, 1] }}
+                transition={{ duration: 3, repeat: Infinity, repeatDelay: 1.5 }}
+              >
                 <Zap className="h-6 w-6 text-primary" />
-              </div>
+              </motion.div>
 
               <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                 Novo Projeto
@@ -177,7 +191,7 @@ export function Portfolio() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-medium text-primary-foreground transition-all duration-300 hover:scale-[1.02]"
+              className="btn-shine mt-10 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-medium text-primary-foreground shadow-glow transition-all duration-300 hover:scale-[1.03]"
             >
               Solicitar orçamento
 

@@ -3,13 +3,23 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/lib/site";
 
+import { motion } from "motion/react";
+
+import { Magnetic } from "../shared/effects";
 import { Reveal } from "../shared/Reveal";
+
+const PARTICLES = Array.from({ length: 14 }, (_, i) => ({
+  left: `${(i * 37) % 100}%`,
+  size: 2 + (i % 3),
+  duration: 6 + (i % 5),
+  delay: (i * 0.7) % 5,
+}));
 
 export function CTA() {
   return (
     <section id="cta" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-4">
-        <Reveal className="glass-strong relative overflow-hidden rounded-3xl px-6 py-16 text-center shadow-elegant sm:px-12 sm:py-20">
+        <Reveal className="glass-strong border-beam relative overflow-hidden rounded-3xl px-6 py-16 text-center shadow-elegant sm:px-12 sm:py-20">
           <div
             aria-hidden
             className="absolute inset-0 -z-10 opacity-70"
@@ -19,6 +29,19 @@ export function CTA() {
             }}
           />
           <div aria-hidden className="absolute inset-0 -z-10 bg-grid opacity-40" />
+          {/* Partículas subindo */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            {PARTICLES.map((p, i) => (
+              <motion.span
+                key={i}
+                className="absolute bottom-0 rounded-full bg-primary-glow"
+                style={{ left: p.left, width: p.size, height: p.size }}
+                initial={{ y: 0, opacity: 0 }}
+                animate={{ y: [-10, -420], opacity: [0, 0.8, 0] }}
+                transition={{ duration: p.duration, delay: p.delay, repeat: Infinity, ease: "easeOut" }}
+              />
+            ))}
+          </div>
 
           <h2 className="mx-auto max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
             <span className="text-gradient">Vamos transformar sua ideia em um projeto?</span>
@@ -28,10 +51,11 @@ export function CTA() {
           </p>
 
           <div className="mt-10 flex justify-center">
+            <Magnetic>
             <Button
               asChild
               size="lg"
-              className="group h-14 rounded-full px-8 text-base shadow-glow"
+              className="btn-shine group h-14 rounded-full px-8 text-base shadow-glow transition-transform hover:scale-[1.03]"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
@@ -39,6 +63,7 @@ export function CTA() {
                 <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
             </Button>
+            </Magnetic>
           </div>
         </Reveal>
       </div>
